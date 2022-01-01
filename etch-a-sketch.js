@@ -1,5 +1,5 @@
 
-// create grid with user specified dimensions
+// create grid with user specified dimensions and default black coloring
 function createGrid() {
 
     let gridSize = prompt("Enter a number from 1 - 100 for the size of the grid");
@@ -45,6 +45,18 @@ function rgbSketch() {
     gridCell.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
             cell.style.backgroundColor = randomRgbColor();
+        });
+    });
+}
+
+
+// eraser to change cell background color back to white
+function eraserSketch() {
+
+    let gridCell = document.querySelectorAll('.cell');
+    gridCell.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = "white";
         });
     });
 }
