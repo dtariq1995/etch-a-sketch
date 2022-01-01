@@ -26,6 +26,8 @@ function createGrid() {
     blackSketch();
 }
 
+
+// change cell background to black on mouseover
 function blackSketch() {
     let gridCell = document.querySelectorAll('.cell');
     gridCell.forEach((cell) => {
@@ -33,6 +35,29 @@ function blackSketch() {
             cell.style.backgroundColor = "black";
         });
     });
+}
+
+
+// change cell background to random rgb value on mouseover
+function rgbSketch() {
+
+    let gridCell = document.querySelectorAll('.cell');
+    gridCell.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = randomRgbColor();
+        });
+    });
+}
+
+
+// generate random rgb color
+function randomRgbColor() {
+
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+
+    return "rgb(" + x + "," + y + "," + z + ")";
 }
 
 
@@ -45,8 +70,6 @@ function eraseGrid() {
     });
     createGrid();
 }
-
-
 
 createGrid();
 
