@@ -49,6 +49,17 @@ function rgbSketch() {
     });
 }
 
+// change cell background to random rgba value on mouseover
+function rgbaSketch() {
+
+    let gridCell = document.querySelectorAll('.cell');
+    gridCell.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = randomRgbaColor();
+        });
+    });
+}
+
 
 // eraser to change cell background color back to white
 function eraserSketch() {
@@ -59,6 +70,18 @@ function eraserSketch() {
             cell.style.backgroundColor = "white";
         });
     });
+}
+
+
+// generate random rgba color
+function randomRgbaColor() {
+
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    let a = Math.random();
+
+    return "rgb(" + x + "," + y + "," + z + "," + a + ")";
 }
 
 
@@ -73,6 +96,19 @@ function randomRgbColor() {
 }
 
 
+// add shading to cell with each passover ------------------------ ADD FUNCTIONALITY FOR SHADING ON PASSOVER IN LATER UPDATE
+/* function shadeSketch() {
+
+    let gridCell = document.querySelectorAll('.cell');
+    gridCell.forEach((cell) => {
+        let opacity = Number(cell.style.opacity);
+        cell.addEventListener('mouseover', () => {
+            cell.style.opacity = opacity + 0.1;
+        });
+    });
+}
+*/ 
+
 // remove cells from grid
 function eraseGrid() {
 
@@ -84,5 +120,4 @@ function eraseGrid() {
 }
 
 createGrid();
-
 
