@@ -19,7 +19,7 @@ function createGrid() {
         const cell = document.createElement('div');
         container.appendChild(cell);
         cell.classList.add('cell');
-        let size = 900 / parseInt(gridSize);
+        let size = 850 / parseInt(gridSize);
         cell.style.height = `${size}px`;
         cell.style.width = `${size}px`;
     }
@@ -67,7 +67,7 @@ function eraserSketch() {
     let gridCell = document.querySelectorAll('.cell');
     gridCell.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = "white";
+            cell.style.backgroundColor = "rgb(226, 226, 226)";
         });
     });
 }
