@@ -19,7 +19,7 @@ function createGrid() {
         const cell = document.createElement('div');
         container.appendChild(cell);
         cell.classList.add('cell');
-        let size = 960 / parseInt(gridSize);
+        let size = 900 / parseInt(gridSize);
         cell.style.height = `${size}px`;
         cell.style.width = `${size}px`;
     }
