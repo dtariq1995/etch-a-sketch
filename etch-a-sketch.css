@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
     display: flex;
     min-height: 100vh;
@@ -5,6 +7,7 @@ body {
     align-items: center;
     background-color: rgb(226, 226, 226);
     flex-wrap: wrap;
+    font-family: 'Bebas Neue', cursive;
 }
 
 main {
@@ -20,14 +23,31 @@ main {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 80px;
+    padding: 150px;
 }
 
 .button {
     background-color: rgb(226, 226, 226);
-    width: 150px;
-    height: 40px;
-    border-radius: 50%;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(56, 56, 56);
+    font-size: 22px;
+    color: rgb(56, 56, 56);
+    font-weight: 500;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button:active,
+.button:focus {
+    background-color: rgb(56, 56, 56);
+    color: white;
 }
 
 header {
@@ -42,7 +62,7 @@ header {
 
 
 #title {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 500;
 }
 
@@ -57,7 +77,7 @@ footer {
     background-color: rgb(56, 56, 56);
     color: white;
     width: 100vw;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 a {
