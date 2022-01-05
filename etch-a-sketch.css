@@ -1,18 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    flex-wrap: wrap;
+    font-family: 'Bebas Neue', cursive;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 150px;
 }
+
+.button {
+    background-color: rgb(226, 226, 226);
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(56, 56, 56);
+    font-size: 22px;
+    color: rgb(56, 56, 56);
+    font-weight: 500;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button:active,
+.button:focus {
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    width: 100vw;
+}
+
+
+#title {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    bottom: 0;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    width: 100vw;
+    font-size: 22px;
+}
+
+a {
+    color: white;
+}
+
 
 #container {
     display: flex;
     flex-wrap: wrap;
-    height: 960px;
-    width: 960px;
+    height: 850px;
+    width: 850px;
     padding: 0;
-    margin: 0;
     border-style: solid;
+    border-color: rgb(56, 56, 56);
     border-width: 10px;
+    background-color: rgb(226, 226, 226);
 }
 
 .cell {

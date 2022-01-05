@@ -8,17 +8,30 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+
     <header>
-        <h1>Etch-a-Sketch</h1>
-        <button id="reset" onclick="eraseGrid()">RESET</button>
-        <button id="rgb" onclick="rgbSketch()">RGB</button>
-        <button id="eraser" onclick="eraserSketch()">ERASER</button>
-        <!--<button id="shader" onclick="shadeSketch()">SHADER</button> FUNCTIONALITY WILL BE ADDED IN LATER UPDATE -->
-        <button id="rgba" onclick="rgbaSketch()">RGBA</button>
-        <button id="black" onclick="blackSketch()">BLACK</button>
+        <h1 id="title">Etch-a-Sketch</h1>
     </header>
+
+
+    <main>
+        <div class="buttons">
+            <button id="reset" class="button" onclick="eraseGrid()">RESET</button>
+            <button id="rgb" class="button" onclick="rgbSketch()">RGB</button>
+            <!--<button id="shader" class="button" onclick="shadeSketch()">SHADER</button> FUNCTIONALITY WILL BE ADDED IN LATER UPDATE -->
+            <button id="pastel" class="button" onclick="rgbaSketch()">Pastel</button>
+            <button id="black" class="button" onclick="blackSketch()">BLACK</button>
+            <button id="eraser" class="button" onclick="eraserSketch()">ERASER</button>
+        </div>
+
+        <div id="container"></div>  
+    </main>
+
     
-    <div id="container"></div>
+    <footer>
+        <p>Created by: <img src="Assets/GitHub-Mark-Light-32px.png" height="18px" width="18px"><a href ="https://github.com/dtariq1995"> Daanyaal Tariq</a></p>
+    </footer>
+
 
     <script src="etch-a-sketch.js"></script>
 </body>
